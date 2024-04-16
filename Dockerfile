@@ -14,6 +14,6 @@ RUN gradle :back-prueba:build
 # actual container
 FROM openjdk:17
 RUN mkdir -p /app/config
-COPY --from=TEMP_BUILD_IMAGE /app/back-prueba/build /app/build
+COPY --from=TEMP_BUILD_IMAGE /app/back-prueba/build/libs/*.jar /app/
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar","/app/build/libs/back-prueba-0.0.1-SNAPSHOT.jar"]

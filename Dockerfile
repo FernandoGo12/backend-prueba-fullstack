@@ -9,7 +9,7 @@ COPY . /app/
 USER root
 RUN chown -R gradle .
 # RUN gradle runDev
-RUN gradle :back-prueba:build -x test
+RUN gradle :back-prueba:build
 
 # actual container
 FROM openjdk:17

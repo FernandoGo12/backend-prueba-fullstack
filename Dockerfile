@@ -5,7 +5,7 @@ RUN echo "------BUILD IMAGE DEI---------"
 RUN echo "--------------------------------"
 RUN mkdir -p /app/
 WORKDIR /app/
-COPY ../../../Users/marel/Downloads /app/
+COPY . /app/
 USER root
 RUN chown -R gradle .
 # RUN gradle runDev
